@@ -104,7 +104,7 @@ export const analyzeEmotionalMap = async (
   input: UserInput
 ): Promise<EmotionalMapAnalysis> => {
   // Use the API key provided in the input, fallback to env if not present (dev mode)
-  const apiKey = input.apiKey || process.env.API_KEY;
+  const apiKey = input.apiKey;
   
   if (!apiKey) {
     throw new Error("API Key is missing. Please enter your Google Gemini API Key in the settings.");
